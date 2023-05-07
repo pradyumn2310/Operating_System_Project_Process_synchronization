@@ -1,0 +1,8 @@
+
+Purpose: The job of this project is to write a program that 
+(a) always satisfies the above constraints and 
+(b) where under no conditions will a deadlock occur. 
+(A deadlock happens, for example, when the apartment is empty, an
+agent and a tenant arrive, but cannot enter. 
+Intended Audience: Owners, tenants and agents who want to deal with various property issues.
+Intended Use: A person can inherit and use the apartment safely without any leak of data.
