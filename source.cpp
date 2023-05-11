@@ -30,6 +30,8 @@ public:
     {
         properties = 4;
     }
+    
+    
 };
 class agents : public property
 {
@@ -142,7 +144,7 @@ public:
                 {
                     cout << "\nNo process is in the critical section!";
                 }
-                ts.tv_sec = 5;
+                ts.tv_sec = 3;
                 ts.tv_nsec = 0;
                 int result = nanosleep(&ts, nullptr);
 
@@ -270,7 +272,7 @@ public:
                 {
                     cout << "\nNo process is in the critical section!";
                 }
-                process_sleep.tv_sec = 5;
+                process_sleep.tv_sec = 3;
                 process_sleep.tv_nsec = 0;
                 int result = nanosleep(&process_sleep, nullptr);
 
@@ -286,7 +288,7 @@ public:
     {
         if (tenant == 0)
         {
-            cout << "You can leave appartment" << endl;
+            cout << "You can leave apartment" << endl;
         }
         else
         {
@@ -296,6 +298,7 @@ public:
 };
 int main()
 {
+    try{
     
     const char *known = "Good Morning Sir\n Welcome to Process Synchronization wizard!!!....";
     
@@ -509,6 +512,11 @@ int main()
             break;
     
     }
+    }
+    catch(...){
+        MessageBox(NULL,"Error Encountered","Error 69",MB_OK);
+    }
+
 
     
     return 0;
